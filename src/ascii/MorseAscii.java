@@ -7,44 +7,45 @@ public class MorseAscii {
     String inputText;
     HashMap<String, String> traslations = new HashMap<>();
 
-    public MorseAscii (String inputText) {
-        this.inputText = inputText;
-        traslations.put("a", ".-");
-        traslations.put("b", "-...");
-        traslations.put("c", "-.-");
-        traslations.put("d", "-..");
-        traslations.put("e", ".");
-        traslations.put("f", "..-.");
-        traslations.put("g", "--.");
-        traslations.put("h", "....");
-        traslations.put("i", "..");
-        traslations.put("j", ".---");
-        traslations.put("k", "-.");
-        traslations.put("l", ".-..");
-        traslations.put("m", "--");
-        traslations.put("n", "-.");
-        traslations.put("o", "---");
-        traslations.put("p", ".--.");
-        traslations.put("q", "--.-");
-        traslations.put("r", ".-.");
-        traslations.put("s", "...");
-        traslations.put("t", "-");
-        traslations.put("u", "..-");
-        traslations.put("v", "...-");
-        traslations.put("w", ".--");
-        traslations.put("x", "-..-");
-        traslations.put("y", "-.--");
-        traslations.put("z", "--..");
-        traslations.put("1", ".----");
-        traslations.put("2","..---");
-        traslations.put("3", "...--");
-        traslations.put("4", "....-");
-        traslations.put("5", ".....");
-        traslations.put("6", "-....");
-        traslations.put("7", "--...");
-        traslations.put("8", "---..");
-        traslations.put("9", "----.");
-        traslations.put("0", "-----");
+    public MorseAscii () {
+
+        traslations.put(".-", "a");
+        traslations.put("-...", "b");
+        traslations.put("-.-.", "c");
+        traslations.put("-..", "d");
+        traslations.put(".", "e");
+        traslations.put("..-.", "f");
+        traslations.put("--.", "g");
+        traslations.put("....", "h");
+        traslations.put("..", "i");
+        traslations.put(".---", "j");
+        traslations.put("-.-", "k");
+        traslations.put(".-..", "l");
+        traslations.put("--", "m");
+        traslations.put("-.", "n");
+        traslations.put("---", "o");
+        traslations.put(".--.", "p");
+        traslations.put("--.-", "q");
+        traslations.put(".-.", "r");
+        traslations.put("...", "s");
+        traslations.put("-", "t");
+        traslations.put("..-", "u");
+        traslations.put("...-", "v");
+        traslations.put(".--", "w");
+        traslations.put("-..-", "x");
+        traslations.put("-.--", "y");
+        traslations.put("--..", "z");
+        traslations.put(".----", "1");
+        traslations.put("..---", "2");
+        traslations.put("...--", "3");
+        traslations.put("....-", "4");
+        traslations.put(".....", "5");
+        traslations.put("-....", "6");
+        traslations.put("--...", "7");
+        traslations.put("---..", "8");
+        traslations.put("----.", "9");
+        traslations.put("-----", "0");
+
     }
 
     public String getInputText() {
@@ -59,15 +60,13 @@ public class MorseAscii {
     }
 
     public void morseToAscii() {
-        String [] separateWords = inputText.split("  ");
+        String [] separateWords = inputText.split("//");
         for (String word : separateWords) {
-            String [] chars = word.split(" ");
+            String [] chars = word.split("/");
             for (String character : chars) {
-                System.out.println(traslations.get(character));
+                System.out.print(traslations.get(character));
             }
-            System.out.println("");
+            System.out.print(" ");
         }
-
-
     }
 }
