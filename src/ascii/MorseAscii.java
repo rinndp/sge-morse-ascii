@@ -64,7 +64,10 @@ public class MorseAscii {
         for (String word : separateWords) {
             String [] chars = word.split("/");
             for (String character : chars) {
-                System.out.print(traslations.get(character));
+                if(traslations.get(character) != null)
+                    System.out.print(traslations.get(character));
+                else
+                    System.err.println("SE HA INGRESADO UN CARACTER QUE NO EXISTE");
             }
             System.out.print(" ");
         }
